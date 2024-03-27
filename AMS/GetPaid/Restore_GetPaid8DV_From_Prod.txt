@@ -1,0 +1,61 @@
+--Restore Dev from Prod backup  (Same backup used to restore Support)
+Please coordinate with GetPaid application team (Santosh Shitole)
+
+USE Master
+GO
+
+ALTER DATABASE GETPAID8DV
+	SET SINGLE_USER
+	WITH ROLLBACK IMMEDIATE
+
+RESTORE DATABASE GETPAID8DV
+FROM DISK = N'\\USDCSHRSQLDV008\BackupFromProd\GETPAID8PD_SUP.bak' 
+WITH
+	RECOVERY,
+	REPLACE,
+	STATS = 5,
+	MOVE 'GPUNI_Data' TO 'E:\MSSQL2014\Data\GETPAID8DV.mdf',			
+	MOVE 'GPUNI_Log' TO 'F:\MSSQL2014\TranLog\GETPAID8dv_log.LDF'	
+
+ALTER DATABASE GETPAID8DV SET RECOVERY SIMPLE
+
+ALTER DATABASE GETPAID8DV		
+	SET MULTI_USER
+	WITH ROLLBACK IMMEDIATE
+
+USE GETPAID8DV
+GO
+
+--Sync logins to users
+DECLARE @username	varchar(75)
+--
+DECLARE ListUsers CURSOR
+FOR
+	SELECT name FROM sys.database_principals
+	WHERE type = 'S' AND principal_id > 4
+	ORDER BY name
+--
+OPEN ListUsers
+--
+FETCH NEXT FROM ListUsers INTO @username
+--
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	IF EXISTS (SELECT name FROM sys.server_principals where  name = @username) 
+	BEGIN
+		exec sp_change_users_login 'Update_One',@username, @username
+		SELECT 'UPDATED USER ' + @username
+	END
+	FETCH NEXT FROM ListUsers INTO @username
+END
+CLOSE ListUsers
+Deallocate ListUsers
+go
+
+-----Restore of Prod to DEV, run after restore is complete BEFORE restart of JBOSS (application)
+update gpglobal.gpclient set url='|10.5.103.74:8180|10.5.103.74:8280|10.5.103.74|usdcgpdappdv003|'
+update gpglobal.GPARIMPORT_CONFIG_DETAIL set PROPERTY_VALUE='10.5.103.74:1199' where PROPERTY_VALUE='10.5.103.72:1199'
+update gpglobal.GPSYST_PROP set value='jnp://10.5.103.74:1200' where NAME='JNDI.URL'
+update gpglobal.gpsyst set corephead = 'GPCOMP1 Weatherford DEV' where corephead = 'GPCOMP1- Weatherford User App';
+update gpglobal.gpsyst set coname = 'Weatherford DEV' where coname = 'Weatherford';
+update gpglobal.GPSCHEDULEDJOBGROUP set ENABLED=0

@@ -1,0 +1,18 @@
+C:\Users\e220932\AppData\Roaming\OneView\oneview_sandbox_old.sdf
+
+T6oYc1R$!3!y3SjVFz?!o?rCA1yKQWgVNpgiEfpF
+
+publish.bat  2.5.0.24  SANDBOX "C:\Users\e220932\AppData\Roaming\OneView\oneview_sandbox.sdf" "D:\publish"
+
+------------------------------------------------------------------------------------------------------------------
+******* below script is to build application in SANDBOX environment ******* 
+------------------------------------------------------------------------------------------------------------------
+D:
+CD D:\Yogesh\TFS\FTW\OneView_Application\Main-Branch\OneView\OneView
+..\publish.bat 2.5.0.27 SANDBOX V:\sandbox.sdf
+
+------------------------------------------------------------------------------------------------------------------
+
+D:\Yogesh\TFS\FTW\OneView_Application\Main-Branch\OneView\OneView>..\publish.bat 2.5.0.27 SANDBOX V:\sandbox.sdf
+
+..\publish.bat 2.5.1.0 PROD V:\prod.sdf

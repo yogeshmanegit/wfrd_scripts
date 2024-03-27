@@ -1,0 +1,12 @@
+SELECT top 100 CreateDate, RunStart, RunEnd, DATEDIFF(MINUTE, RunStart, RunEnd) [Time], JobQueue.JobQueueStatusId
+FROM JobQueue 
+Where JobId = 31
+order by 1 desc
+
+SELECT 
+WarningMsg,
+CONVERT(nchar(11), DateAdded, 100) [Date],
+COUNT(*) [Count]
+FROM AssetWarnings
+Where DateAdded > DATEADD(wk,-1,getdate())
+GROUP BY WarningMsg, CONVERT(nchar(11), DateAdded, 100)

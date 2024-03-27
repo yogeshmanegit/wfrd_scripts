@@ -1,0 +1,216 @@
+﻿<CBMs Count="2" Version="1.00">
+  <CBM>
+    <JobInfo JobName="KC1909094" />
+    <WellInfo WellName="MG-0438" />
+    <RigActivity>
+      <Activity IsTBRT="True" EndDatetime="05-Sep-2019 00:15:00" StartDatetime="05-Sep-2019 00:00:00" />
+    </RigActivity>
+    <RunInfo>
+      <RunName RunName="01" />
+      <SurveyDistGT60DQM>1</SurveyDistGT60DQM>
+    </RunInfo>
+    <ToolInfo>
+      <Sensor name="DIR" sensordist="69.5" units="ft" />
+      <Sensor name="GAM" sensordist="55.29" units="ft" />
+      <Sensor name="WELL" sensordist="0.0" units="ft" />
+    </ToolInfo>
+    <Histograms>
+      <Monitor Name="BENDING">
+        <Tool ToolMnem="WELL">
+          <Histogram HistogramUnits="Rotations" BinUnits="DLS(deg/100ft)" CurveName="RPM4" MetricName="Bending" Recorded="1">
+            <NonDrillingDLS>
+              <Bin start="0" end="1">0</Bin>
+              <Bin start="1" end="2">0</Bin>
+              <Bin start="2" end="3">0</Bin>
+              <Bin start="3" end="4">0</Bin>
+              <Bin start="4" end="5">0</Bin>
+              <Bin start="5" end="6">0</Bin>
+              <Bin start="6" end="7">0</Bin>
+              <Bin start="7" end="8">0</Bin>
+              <Bin start="8" end="9">0</Bin>
+              <Bin start="9" end="10">0</Bin>
+              <Bin start="10" end="11">0</Bin>
+              <Bin start="11" end="12">0</Bin>
+              <Bin start="12" end="13">0</Bin>
+              <Bin start="13" end="14">0</Bin>
+              <Bin start="14" end="15">0</Bin>
+              <Bin start="15" end="16">0</Bin>
+              <Bin start="16" end="17">0</Bin>
+              <Bin start="17" end="18">0</Bin>
+              <Bin start="18" end="19">0</Bin>
+              <Bin start="19" end="20">0</Bin>
+              <Bin start="20" end="21">0</Bin>
+              <Bin start="21" end="22">0</Bin>
+              <Bin start="22" end="23">0</Bin>
+              <Bin start="23" end="24">0</Bin>
+              <Bin start="24" end="25">0</Bin>
+              <Bin start="25" end="26">0</Bin>
+              <Bin start="26" end="27">0</Bin>
+              <Bin start="27" end="28">0</Bin>
+              <Bin start="28" end="29">0</Bin>
+              <Bin start="29" end="30">0</Bin>
+            </NonDrillingDLS>
+            <DrillingDLS>
+              <Bin start="0" end="1">0</Bin>
+              <Bin start="1" end="2">0</Bin>
+              <Bin start="2" end="3">0</Bin>
+              <Bin start="3" end="4">0</Bin>
+              <Bin start="4" end="5">0</Bin>
+              <Bin start="5" end="6">0</Bin>
+              <Bin start="6" end="7">0</Bin>
+              <Bin start="7" end="8">0</Bin>
+              <Bin start="8" end="9">0</Bin>
+              <Bin start="9" end="10">0</Bin>
+              <Bin start="10" end="11">0</Bin>
+              <Bin start="11" end="12">0</Bin>
+              <Bin start="12" end="13">0</Bin>
+              <Bin start="13" end="14">0</Bin>
+              <Bin start="14" end="15">0</Bin>
+              <Bin start="15" end="16">0</Bin>
+              <Bin start="16" end="17">0</Bin>
+              <Bin start="17" end="18">0</Bin>
+              <Bin start="18" end="19">0</Bin>
+              <Bin start="19" end="20">0</Bin>
+              <Bin start="20" end="21">0</Bin>
+              <Bin start="21" end="22">0</Bin>
+              <Bin start="22" end="23">0</Bin>
+              <Bin start="23" end="24">0</Bin>
+              <Bin start="24" end="25">0</Bin>
+              <Bin start="25" end="26">0</Bin>
+              <Bin start="26" end="27">0</Bin>
+              <Bin start="27" end="28">0</Bin>
+              <Bin start="28" end="29">0</Bin>
+              <Bin start="29" end="30">0</Bin>
+            </DrillingDLS>
+          </Histogram>
+        </Tool>
+      </Monitor>
+    </Histograms>
+  </CBM>
+  <CBM>
+    <JobInfo JobName="KC1909094" />
+    <WellInfo WellName="MG-0438" />
+    <RigActivity>
+      <Activity IsTBRT="True" EndDatetime="23-Sep-2019 00:15:00" StartDatetime="23-Sep-2019 00:00:00" />
+    </RigActivity>
+    <RunInfo>
+      <RunName RunName="03" />
+      <SurveyDistGT60DQM>1</SurveyDistGT60DQM>
+    </RunInfo>
+    <ToolInfo>
+      <Sensor name="AZD" sensordist="69.43" units="ft" PartTypeID="22" SerialNumber="59032" />
+      <Sensor name="DIR" sensordist="27.24" units="ft" PartTypeID="11" SerialNumber="27820" />
+      <Sensor name="FT" sensordist="97.74" units="ft" />
+      <Sensor name="HAGR" sensordist="39.08" units="ft" PartTypeID="1015" SerialNumber="3923" />
+      <Sensor name="MFR" sensordist="48.72" units="ft" PartTypeID="27" SerialNumber="51915" />
+      <Sensor name="NGRSS" sensordist="6.85" units="ft" />
+      <Sensor name="PDS" sensordist="0" units="ft" />
+      <Sensor name="PRESS" sensordist="118.2" units="ft" PartTypeID="10" SerialNumber="5549" />
+      <Sensor name="TNP" sensordist="77.39" units="ft" PartTypeID="18" SerialNumber="59031" />
+    </ToolInfo>
+    <Histograms>
+      <Monitor Name="THERMAL">
+        <Tool ToolMnem="DIR">
+          <Histogram HistogramUnits="hrs" BinUnits="C" CurveName="IDS_TEMPm_1" MetricName="Thermal" Recorded="1">
+            <Bin start="-5" end="5">0</Bin>
+            <Bin start="5" end="15">0</Bin>
+            <Bin start="15" end="25">0</Bin>
+            <Bin start="25" end="35">0.124722</Bin>
+            <Bin start="35" end="45">15.6753</Bin>
+            <Bin start="45" end="55">13.3078</Bin>
+            <Bin start="55" end="65">2.48833</Bin>
+            <Bin start="65" end="75">34.2744</Bin>
+            <Bin start="75" end="85">13.7019</Bin>
+            <Bin start="85" end="95">0</Bin>
+            <Bin start="95" end="105">0</Bin>
+            <Bin start="105" end="115">0</Bin>
+            <Bin start="115" end="125">0</Bin>
+            <Bin start="125" end="135">0</Bin>
+            <Bin start="135" end="145">0</Bin>
+            <Bin start="145" end="155">0</Bin>
+            <Bin start="155" end="165">0</Bin>
+            <Bin start="165" end="175">0</Bin>
+            <Bin start="175" end="185">0</Bin>
+            <Bin start="185" end="195">0</Bin>
+            <Bin start="195" end="205">0</Bin>
+          </Histogram>
+        </Tool>
+        <Tool ToolMnem="MFR">
+          <Histogram HistogramUnits="hrs" BinUnits="C" CurveName="MFRTEMPPm_1" MetricName="Thermal" Recorded="1">
+            <Bin start="-5" end="5">0</Bin>
+            <Bin start="5" end="15">0</Bin>
+            <Bin start="15" end="25">0</Bin>
+            <Bin start="25" end="35">6.7</Bin>
+            <Bin start="35" end="45">4.88889</Bin>
+            <Bin start="45" end="55">17.3</Bin>
+            <Bin start="55" end="65">6.28889</Bin>
+            <Bin start="65" end="75">34.9778</Bin>
+            <Bin start="75" end="85">14.1944</Bin>
+            <Bin start="85" end="95">0</Bin>
+            <Bin start="95" end="105">0</Bin>
+            <Bin start="105" end="115">0</Bin>
+            <Bin start="115" end="125">0</Bin>
+            <Bin start="125" end="135">0</Bin>
+            <Bin start="135" end="145">0</Bin>
+            <Bin start="145" end="155">0</Bin>
+            <Bin start="155" end="165">0</Bin>
+            <Bin start="165" end="175">0</Bin>
+            <Bin start="175" end="185">0</Bin>
+            <Bin start="185" end="195">0</Bin>
+            <Bin start="195" end="205">0</Bin>
+          </Histogram>
+        </Tool>
+        <Tool ToolMnem="HAGR">
+          <Histogram HistogramUnits="hrs" BinUnits="C" CurveName="HAGRPCTEMPm_1" MetricName="Thermal" Recorded="1">
+            <Bin start="-5" end="5">0</Bin>
+            <Bin start="5" end="15">0</Bin>
+            <Bin start="15" end="25">0</Bin>
+            <Bin start="25" end="35">6.16667</Bin>
+            <Bin start="35" end="45">9.5</Bin>
+            <Bin start="45" end="55">13.75</Bin>
+            <Bin start="55" end="65">7.91667</Bin>
+            <Bin start="65" end="75">40.5</Bin>
+            <Bin start="75" end="85">10.6667</Bin>
+            <Bin start="85" end="95">0</Bin>
+            <Bin start="95" end="105">0</Bin>
+            <Bin start="105" end="115">0</Bin>
+            <Bin start="115" end="125">0</Bin>
+            <Bin start="125" end="135">0</Bin>
+            <Bin start="135" end="145">0</Bin>
+            <Bin start="145" end="155">0</Bin>
+            <Bin start="155" end="165">0</Bin>
+            <Bin start="165" end="175">0</Bin>
+            <Bin start="175" end="185">0</Bin>
+            <Bin start="185" end="195">0</Bin>
+            <Bin start="195" end="205">0</Bin>
+          </Histogram>
+        </Tool>
+        <Tool ToolMnem="PRESS">
+          <Histogram HistogramUnits="hrs" BinUnits="C" CurveName="BTMPm_1" MetricName="Thermal" Recorded="1">
+            <Bin start="-5" end="5">0</Bin>
+            <Bin start="5" end="15">0</Bin>
+            <Bin start="15" end="25">0</Bin>
+            <Bin start="25" end="35">7.58333</Bin>
+            <Bin start="35" end="45">4.08333</Bin>
+            <Bin start="45" end="55">21.75</Bin>
+            <Bin start="55" end="65">7.33333</Bin>
+            <Bin start="65" end="75">37.5</Bin>
+            <Bin start="75" end="85">10.1667</Bin>
+            <Bin start="85" end="95">0</Bin>
+            <Bin start="95" end="105">0</Bin>
+            <Bin start="105" end="115">0</Bin>
+            <Bin start="115" end="125">0</Bin>
+            <Bin start="125" end="135">0</Bin>
+            <Bin start="135" end="145">0</Bin>
+            <Bin start="145" end="155">0</Bin>
+            <Bin start="155" end="165">0</Bin>
+            <Bin start="165" end="175">0</Bin>
+            <Bin start="175" end="185">0</Bin>
+            <Bin start="185" end="195">0</Bin>
+            <Bin start="195" end="205">0</Bin>
+          </Histogram>
+        </Tool>
+      </Monitor>
+    </Histograms>
+  </CBM>
+</CBMs>

@@ -1,0 +1,1 @@
+select * from SYSADM.PS_W_WPTS_VW where type ='POI'

@@ -1,0 +1,3 @@
+-- Status column needs to have 'Test & Inspection', 'Awaiting Disposition', 'Disposition Approved', 'Service & Repair', 'Closed'
+-- Add new column AssetRepairTrackId in PFTWO
+-- 
