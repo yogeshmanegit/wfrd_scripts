@@ -2,11 +2,11 @@ use oneview;
 
 DECLARE @jobId uniqueidentifier
 
-select @jobId = jobID from Job where serviceOrder = '4131-392100477'
+select @jobId = jobID from Job where serviceOrder = '1714-396861160'
 
 BEGIN TRAN
 
-UPDATE Job SET invoiceDateTime = '2024-01-24' WHERE jobID = @jobId
+UPDATE Job SET invoiceDateTime = '2024-03-08' WHERE jobID = @jobId
 
 UPDATE TMPSOADTPipelineMessageProcessing SET processed = 1 WHERE jobID = @jobId
 

@@ -12,7 +12,7 @@ join DispatchInstances di on d.DispatchId = di.DispatchId
 join DispatchInstanceItems dii on dii.DispatchInstanceId = di.DispatchInstanceId
 where 1 = 1 
 AND ISNULL(dii.ErrorMessage,'') =''
-and SerialNum ='12118131-2-1' 
+and SerialNum ='16114283-1' 
 order by 5 desc
 
 --UPDATE dii
