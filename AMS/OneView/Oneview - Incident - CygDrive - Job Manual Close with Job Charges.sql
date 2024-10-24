@@ -31,3 +31,4 @@ AND TransactionName = 'DT-INVOICE' and (serialnumber is null or serialnumber = '
 group by OrderNumber, serviceOrder
 ) A
 where BillDate >= '2023-09-01'
+ 

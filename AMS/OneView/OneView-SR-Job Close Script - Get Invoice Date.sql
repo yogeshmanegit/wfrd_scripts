@@ -1,30 +1,13 @@
-select * from SOAMessages where TransactionName ='DT-INVOICE' and id1 IN (15034013, 15033384, 15036305, 15037547, 15038551)
-
+--select * from SOAMessages where TransactionName ='DT-INVOICE' and id1 IN (15034013, 15033384, 15036305, 15037547, 15038551)
+use AesSOA;
 
 ;WITH XMLNAMESPACES(DEFAULT 'http://www.wft.com/DeliveryTicketInfo/Response/v1.0')
-SELECT DISTINCT payload.value('(/DTInfoCollection/MessageDetail/DateofTransaction/text())[1]', 'varchar(10)'), id1 
-FROM SOAMessages (NOLOCK) where TransactionName ='DT-INVOICE' and id1 IN (
-15034013,
-15033384,
-15036305,
-15037547,
-15038551,
-14981868,
-14982155,
-14990166,
-14990315,
-14990331,
-14992413,
-14998283,
-15005075,
-15005070,
-15007168,
-15014316,
-15015712,
-15015711,
-15017048,
-15023365,
-15022244,
-15026243
-)
+SELECT DISTINCT payload.value('(/DTInfoCollection/MessageDetail/DateofTransaction/text())[1]', 'varchar(10)') [Invoice Date], id1 [DeliveryTicketNumber],
+'exec dbo.usp_Job_CloseByInvoiceDate ' + ID1 +',' + ''''+ payload.value('(/DTInfoCollection/MessageDetail/DateofTransaction/text())[1]', 'varchar(10)') + ''''
+FROM SOAMessages (NOLOCK) where TransactionName ='DT-INVOICE' and id1  IN (
+15514301
+, 15517713
+, 15514301
+, 15479926)
+
 order by 2, 1
