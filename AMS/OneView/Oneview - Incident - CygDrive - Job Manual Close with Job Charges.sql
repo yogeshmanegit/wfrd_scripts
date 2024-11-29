@@ -1,5 +1,5 @@
 -- cd /cygdrive/c/cms
-
+ 
 use oneview;
 
 --select *
