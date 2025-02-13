@@ -6,4 +6,6 @@ T6oYc1R$!3!y3SjVFz?!o?rCA1yKQWgVNpgiEfpF
 ******* below script is to build application in SANDBOX environment ******* 
 ------------------------------------------------------------------------------------------------------------------
 
-D:\Yogesh\TFS\FTW\OneView_Application\TEST\OneView\OneView>..\publish.bat  2.5.3.1  SANDBOX "C:\Users\e220932\AppData\Roaming\OneView\oneview_sandbox.sdf" "D:\publish"
+D:\Yogesh\TFS\FTW\OneView_Application\TEST\OneView\OneView>..\publish.bat  2.6.0.4  SANDBOX "C:\Users\e220932\AppData\Roaming\OneView\oneview_sandbox.sdf" "D:\publish"
+
+\\usdcapsfnppd001\ClickOnceApps\OneView\
