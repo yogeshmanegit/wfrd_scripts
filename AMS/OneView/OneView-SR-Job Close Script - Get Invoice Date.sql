@@ -4,6 +4,20 @@ use AesSOA;
 ;WITH XMLNAMESPACES(DEFAULT 'http://www.wft.com/DeliveryTicketInfo/Response/v1.0')
 SELECT DISTINCT payload.value('(/DTInfoCollection/MessageDetail/DateofTransaction/text())[1]', 'varchar(10)') [Invoice Date], id1 [DeliveryTicketNumber],
 'exec dbo.usp_Job_CloseByInvoiceDate ' + ID1 +',' + ''''+ payload.value('(/DTInfoCollection/MessageDetail/DateofTransaction/text())[1]', 'varchar(10)') + ''''
-FROM SOAMessages (NOLOCK) where TransactionName ='DT-INVOICE' and id1  IN (15363946)
+FROM SOAMessages (NOLOCK) where TransactionName ='DT-INVOICE' and id1  IN (
+15715632
+, 15715633
+, 14818603
+, 14828085
+, 15120051
+, 15717273
+, 15714519
+, 15565095
+, 15712084
+, 14820054
+, 14923481
+, 14822084
+, 15717828
+)
 
 order by 2, 1

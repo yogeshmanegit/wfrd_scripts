@@ -1,5 +1,5 @@
--- cd /cygdrive/c/cms
- 
+-- cd /cygdrive/c/jms
+
 use oneview;
 
 --select *
