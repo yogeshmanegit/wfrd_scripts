@@ -1,6 +1,7 @@
 DECLARE -- Add the parameters for the stored procedure here
-	@AssetRepairTrackId uniqueidentifier= '465DE5E6-FE5F-4DA8-B1F7-9EC5C8A15FA8',--'E6444983-9142-4BE1-BE63-17240951DDA0'
-                     @UserId int=0 
+	--@AssetRepairTrackId uniqueidentifier= '465DE5E6-FE5F-4DA8-B1F7-9EC5C8A15FA8'
+	@AssetRepairTrackId uniqueidentifier= 'E6444983-9142-4BE1-BE63-17240951DDA0'
+                     , @UserId int=0 
 BEGIN
 SET NOCOUNT ON;
 
@@ -89,6 +90,23 @@ SELECT
   
   ORDER BY CASE WHEN PFTType = 2 THEN 1 
 				WHEN PFTType = 1 THEN 2 
-				ELSE PFTType END, PO.DateAdded
+				ELSE PFTType 
+			END, PO.DateAdded
 
+	Declare @assetNumber VARCHAR(10)
+	SELECT @assetNumber = AssetNumber FROM AssetRepairTrack (NOLOCK) WHERE AssetRepairTrackId = @AssetRepairTrackId
+
+	-- Unplanned Section
+	SELECT * 
+	FROM JDEWorkOrders jw (NOLOCK)
+	LEFT JOIN PFTWO p (NOLOCK) on jw.WorkOrderNumber = p.JDEWorkOrderNum and p.JDEWorkOrderNum IS NULL
+	WHERE jw.AssetItemNumber = @assetNumber
+		AND jw.WorkOrderStatusCode not in('ET','EU','EV','EW','EX','EZ') -- Open work order
+		AND (CASE WHEN jw.AssetRepairTrackId IS NOT NULL AND PlannedWOType != '1' THEN 1 
+				WHEN jw.AssetRepairTrackId IS NULL AND PlannedWOType = '1' THEN 1 
+				WHEN jw.AssetRepairTrackId IS NULL AND PlannedWOType IS NULL THEN 1
+			END) = 1
+		AND OrderType != 'WM-6'
 END
+
+
